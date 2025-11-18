@@ -17,39 +17,47 @@ Data-flow del programma:
 Installazione di ExploitDB:
 
 Debian/Ubuntu: 
+
     sudo apt install exploitdb
 macOS:
+
     brew install exploitdb 
 
 ---------------------------------------------
 
 Per aggiornare il database di Searchsploit:
 
-searchsplot -u
+    searchsplot -u
 
 ---------------------------------------------
 
-Permessi per Masscan in modo da non doverlo aprire come root
+Permessi per Masscan in modo da non doverlo aprire come root:
 
-sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip $(which masscan)
+    sudo setcap cap_net_raw,cap_net_admin,cap_net_bind_service+eip $(which masscan)
 
 ---------------------------------------------
 
 Per installare whatweb:
 
-sudo apt install whatweb
+    sudo apt install whatweb
 
 ---------------------------------------------
 
 Font figlet per il banner:
-https://www.figlet.org/examples.html
+
+    https://www.figlet.org/examples.html
 
 
 ---------------------------------------------
 
 
 La NVD_API_KEY è opzionale: senza chiave la ricerca sarà più lenta
+
 Inserire la propria nel modulo config/apis.py
+
+Per richiederla, visita questa pagina:
+
+https://nvd.nist.gov/developers/request-an-api-key
 
 ---------------------------------------------
 
@@ -75,40 +83,45 @@ Ex.
 Come utilizzare il programma:
 
 ## Scarica database exploit-db
-sudo apt install exploitdb
+    sudo apt install exploitdb
 
 ## Aggiorna Searchsploit
-searchsploit -u
+    searchsploit -u
 
-## Scaricare Whatweb
-sudo apt install whatweb
+## Scarica Whatweb
+    sudo apt install whatweb
 
-## Scaricare lo strumento da GitHub
-git clone https://github.com/Mattpili/AutoScann3r.git
-cd AutoScann3r
+## Clona la repo di questo programma
+    git clone https://github.com/Mattpili/AutoScann3r.git
 
-## (Opzionale) Creazione di un virtual enviroment
-python3 -m venv .venv
-source .venv/bin/activate
+    cd AutoScann3r
 
-## Installare le dipendenze richieste 
-pip install -r requirements.txt
+## (Opzionale) Crea un virtual environment
+    python3 -m venv .venv
 
-## (Opzionale) Inserire la propria chiave NVD
-Inserirla in config/apis.py
+    source .venv/bin/activate
 
-## Inserire gli host da analizzare come da esempio
-Inserirli in core/targets/targets.csv
+## Installa le dipendenze richieste 
+    pip install -r requirements.txt
+
+## (Opzionale) Inserisci la tua chiave NVD
+Inseriscila in config/apis.py
+
+## Inserisci gli host da analizzare (come da esempio)
+Inseriscili in core/targets/targets.csv
+
 In questo formato:
 
 Scanme;45.33.32.156
+
 Scanme1;00.00.00.00
+
 Scanme3;...
 
-## Esecuzione
-python app.py
+## Esegui il programma
+    python app.py
 
-## Consultare i report
+## Consulta i report
 Finita la scansione, visita la directory /reports
 
 
