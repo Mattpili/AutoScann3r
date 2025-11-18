@@ -74,30 +74,30 @@ Ex.
 
 Come utilizzare il programma:
 
-# Scarica database exploit-db
+## Scarica database exploit-db
 sudo apt install exploitdb
 
-# Aggiorna Searchsploit
+## Aggiorna Searchsploit
 searchsploit -u
 
-# Scaricare Whatweb
+## Scaricare Whatweb
 sudo apt install whatweb
 
-# Scaricare lo strumento da GitHub
+## Scaricare lo strumento da GitHub
 git clone https://github.com/Mattpili/AutoScann3r.git
 cd AutoScann3r
 
-# (Opzionale) Creazione di un virtual enviroment
+## (Opzionale) Creazione di un virtual enviroment
 python3 -m venv .venv
 source .venv/bin/activate
 
-# Installare le dipendenze richieste 
+## Installare le dipendenze richieste 
 pip install -r requirements.txt
 
-# (Opzionale) Inserire la propria chiave NVD
+## (Opzionale) Inserire la propria chiave NVD
 Inserirla in config/apis.py
 
-# Inserire gli host da analizzare come da esempio
+## Inserire gli host da analizzare come da esempio
 Inserirli in core/targets/targets.csv
 In questo formato:
 
@@ -105,10 +105,10 @@ Scanme;45.33.32.156
 Scanme1;00.00.00.00
 Scanme3;...
 
-# Esecuzione
+## Esecuzione
 python app.py
 
-# Consultare i report
+## Consultare i report
 Finita la scansione, visita la directory /reports
 
 
