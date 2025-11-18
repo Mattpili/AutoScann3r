@@ -5,11 +5,17 @@ AutoScann3r è un strumento pensato per automatizzare la scansione di host trami
 ---------------------------------------------
 
 Data-flow del programma:
+
 1: Masscan per ottenere le porte aperte.
+
 2: Nmap sulle porte aperte per ottenere servizi e versioni.
+
 3: Parsing dell'output Nmap.
+
 4: WhatWeb per identificare tecnologie web.
+
 5: Ricerca exploit su exploit-db e correlazione con CVE/NVD.
+
 6: Generazione di un semplice report HTML finale.
 
 ---------------------------------------------
