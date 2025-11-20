@@ -2,6 +2,8 @@
 
 AutoScann3r è un strumento pensato per automatizzare la scansione di host tramite i famosi strumenti Masscan, Nmap, WhatWeb e unire servizi in uso, possibili vulnerabilità e relativi CVE in un unico report HTML.
 
+Utilizzare questo tool solamente per la scansione di host propri o altrui con previo consenso.
+
 ---------------------------------------------
 
 Data-flow del programma:
